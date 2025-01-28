@@ -136,3 +136,93 @@ main {
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
+
+ 
+/* Boas-vindas (texto centralizado) */
+.welcome-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;  /* Cor de fundo clara e clean */
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;  /* Cor escura para o título */
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #555;  /* Cor mais suave para o texto */
+    line-height: 1.6;
+}
+
+
+
+.service-card a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* Seção de serviços (cartões) */
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Estilo para os cartões */
+.service-card {
+    width: 250px;
+    height: 215px; /* Definindo uma altura fixa */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante o espaçamento entre o título, imagem e o fundo */
+}
+
+/* Garantindo que as imagens dentro dos cartões tenham o mesmo tamanho */
+.service-card img {
+    width: 100%;             /* A largura ocupa 100% do contêiner */
+    height: 180px;           /* Definindo uma altura fixa para as imagens */
+    object-fit: cover;       /* A imagem irá cobrir o contêiner mantendo a proporção */
+    object-position: center; /* A imagem será centralizada */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover nos cartões */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsividade - Ajusta os cartões para telas pequenas */
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;  /* Empilha os cartões em telas menores */
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;  /* Cartões ocupam 80% da largura da tela */
+        margin-bottom: 20px;  /* Espaço entre os cartões */
+    }
+}
